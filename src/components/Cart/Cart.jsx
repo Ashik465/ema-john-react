@@ -17,8 +17,8 @@ const Cart = ({cart}) => {
          <p className='pt-8 '>Selected item: {cart.length}</p>
          <p className='pt-3'>Total price: $ {totalPrize}</p>
          <p className='pt-3'>Total Shipping Charge: $ {totalShipping}</p>
-         <p className='pt-3'>Tax: {tax}</p>
-         <h6 className='pt-3 font-bold '>Grand Total: ${grandTotal}</h6>
+         <p className='pt-3'>Tax: {tax.toFixed(2)}</p>
+         <h6 className='pt-3 font-bold '>Grand Total: ${grandTotal.toFixed(2)}</h6>
         </div>
     );
 };
