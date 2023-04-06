@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../images/Logo.svg'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -29,10 +30,10 @@ const Header = () => {
   
   <div className="navbar-end">
   <ul className="menu menu-horizontal px-1 text-white">
-      <li><a>Order</a></li>
-      <li><a>Order Review</a></li>
-      <li><a>Manage Inventory</a></li>
-      <li><a>Login</a></li>
+      <li><Link to='/'>Shop</Link></li>
+      <li><Link to='/orders'>Order </Link></li>
+      <li><Link to='/inventory'> Inventory</Link></li>
+      <li><Link to='/login'>Login</Link></li>
       
     </ul>
   </div>
