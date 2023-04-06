@@ -19,7 +19,8 @@ const Cart = ({cart,deleteCart}) => {
     const tax = totalPrize *7/100;
     const grandTotal = totalPrize +totalShipping+tax
     return (
-        <div className='bg-[#FF99004D] p-5 text-lg h-[5%] sticky top-0'>
+        <div className='bg-[#FF99004D] p-5 text-lg  sticky top-0'>
+            {/* h-[5%] */}
             <h1 className='font-bold text-3xl'>order summery </h1>
          <p className='pt-8 '>Selected item: {quantity}</p>
          <p className='pt-3'>Total price: $ {totalPrize}</p>
