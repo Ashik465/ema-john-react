@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Cart from '../Cart/Cart';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import ReviewItem from '../ReviewItem/ReviewItem';
 
 import './Order.css'
@@ -42,7 +42,13 @@ const Orders = () => {
       </div>
 
       <div className="cart-container">
-    <Cart cart={cart} deleteCart ={deleteCart } ></Cart>
+    <Cart cart={cart} deleteCart ={deleteCart } >
+    <Link to = '/checkout'>
+          <button  className='btn mt-10 text-white bg-[#FF9900] border-none w-full'>Checkout 
+     
+         </button>
+          </Link>
+    </Cart>
       </div>
     </div>
     );
