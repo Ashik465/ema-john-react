@@ -3,7 +3,7 @@ import { deleteShoppingCart } from '../../utilities/fakedb';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
-const Cart = ({cart,deleteCart}) => {
+const Cart = ({cart,deleteCart,children}) => {
     // console.log(cart)
 
     let quantity = 0 ;
@@ -31,6 +31,7 @@ const Cart = ({cart,deleteCart}) => {
          <button onClick={deleteCart} className='btn mt-10 text-white bg-[#FF3030] border-none w-full'>Clear Cart
          <FontAwesomeIcon className='ml-2' icon={faTrashCan} />
          </button>
+         {children}
         </div>
     );
 };
