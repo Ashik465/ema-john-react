@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../images/Logo.svg'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const Header = () => {
+
+const {logout, user} = useContext(AuthContext)
+
+const handleLogout = () =>{
+   
+  logout()
+  .then(() => {
+    // Sign-out successful.
+  }).catch((error) => {
+    console.log(error)
+  });
+
+}
+
     return (
         <>
 <div className="navbar  bg-primary md:px-24 ">
@@ -34,7 +49,8 @@ const Header = () => {
       <li><Link to='/orders'>Order </Link></li>
       <li><Link to='/inventory'> Inventory</Link></li>
       <li><Link to='/login'>Login</Link></li>
-      
+      <li><Link to='/signup'>Sign Up</Link></li>
+   <li>{user && <span>welcome {user.email}   <button className='btn btn-success hover:bg-gray-600 hover:border-none' onClick={handleLogout}>Log-Out </button></span>  }</li>   
     </ul>
   </div>
 </div>
