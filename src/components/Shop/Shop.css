@@ -8,3 +8,9 @@
     grid-template-columns: repeat(3,1fr);
     gap: 45px;
 }
+
+.pagination{
+    
+    text-align: center;
+    margin-top: 20px;
+}
